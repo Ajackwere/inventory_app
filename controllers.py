@@ -1,5 +1,6 @@
 # functions for handling business logic
 from models import SessionLocal, Product, Supplier, Category
+# from queries import inner_join_products_categories, left_outer_join_products_suppliers
 
 
 def add_product(name, quantity, price, size, color, category_id, supplier_id):
@@ -28,4 +29,3 @@ def add_category(name):
     session.add(category)
     session.commit()
     session.close()
-
